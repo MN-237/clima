@@ -429,8 +429,8 @@ void PanasonicACWLAN::handle_packet() {
     }
 
     update_target_temperature((int8_t) this->rx_buffer_[22]);
-//    update_current_temperature((int8_t) this->rx_buffer_[62]);
-    update_current_temperature((int8_t) this->0x10);                                                          // 16 °C
+    update_current_temperature((int8_t) this->rx_buffer_[62]);
+//    update_current_temperature((int8_t) this->0x10);                                                          // 16 °C
     update_outside_temperature((int8_t) this->rx_buffer_[66]);  // Set current (outside) temperature
 
     std::string horizontalSwing = determine_swing_horizontal(this->rx_buffer_[34]);
