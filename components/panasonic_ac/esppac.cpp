@@ -75,8 +75,9 @@ void PanasonicAC::update_current_temperature(int8_t temperature) {
     ESP_LOGW(TAG, "Received out of range inside temperature: %d", temperature);
     return;
   }
-
-  this->current_temperature - 20 = temperature;
+  
+  temperature = 17;
+  //this->current_temperature = temperature;
 }
 
 void PanasonicAC::update_target_temperature(uint8_t raw_value) {
